@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    justify-content: center; 
+    align-items: center;   
+    display: flex;
+}
+
+
+
+.container {
+    display: grid;
+    height: 180rem;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 2fr 1.2fr 2fr 2fr 0.9fr;
+    grid-template-areas: 
+    "header header header header header"
+    "content1 content1 content1 content1 content1 "
+    "main main main main main"
+    "article article article article article"
+    "content6 content6 content6 content6 content6"
+    "footer footer footer footer footer";
+    grid-row-gap: 5rem;
+    margin-top: 10rem;
+    
+}
+
+
+
+/* NAVBAR */
+
+
+nav {
+    text-align: center;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 10rem;
+    z-index: 2;
+
+}
+
+nav .logo img {
+    position: absolute;
+    width: 6rem;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    
+}
+
+
+nav .logo img:hover {
+    background-color: rgb(1, 1, 1);
+    border-radius: 20%;
+}
+
+
+nav ul li {
+    display: inline-block;
+    margin-top: 4rem;
+    transform: translateY(-30%);
+    transition: transform 0.3s ease;
+
+}
+
+nav li {
+    color: rgb(255, 255, 255);
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    padding: 2rem;
+}
+
+.main-nav:hover {
+    transform: translateY(-30%) scale(1.1);
+  }
+
+
+  nav a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+/* NAV TOP ICONS */
+
+nav .topicons {
+    position: relative;
+    margin-left: 30rem;
+    top: 3rem;
+}
+
+
+/* ADDITONAL BAR */
+
+/* LANGUAGE */
+
+.language-dropdown {
+    position: relative;
+    display: inline-block; 
+    top: -11.5rem;
+    right: 16rem;
+}
+.language-dropdown select {
+    font-family: "Oswald", sans-serif;
+    color: white;
+    padding: 5px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    background-color: rgb(0, 0, 0);
+}
+
+.language-dropdown option{
+    font-family: "Oswald", sans-serif;
+}
+
+
+
+/* HEADER */
+
+header {
+    background-image: url(images/Cover.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-area: header;
+    text-align: center;
+    align-items: center;
+}
+
+header video {
+    width: 100%;
+    margin-top: -12rem;
+}
+
+
+
+
+
+
+#content1 {
+    position: relative;
+    grid-area: content1;
+    text-align: center;
+    align-items: center;
+    top: -5rem;
+}
+
+
+#content1 .c1 h1 {
+    position: relative;
+    color: white;
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.844);
+    font-family: "Oswald", sans-serif;
+    width: 21.1rem;
+    top: 25rem;
+    left: 3.6%;
+    padding: 1rem 2rem;
+    height: 5rem;
+    font-weight: 400;
+}
+
+#content1 .c2 h1 {
+    position: relative;
+    color: white;
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.844);
+    font-family: "Oswald", sans-serif;
+    width: 21.1rem;
+    top: 25rem;
+    left: 3.6%;
+    padding: 1rem 2rem;
+    height: 5rem;
+    font-weight: 400;
+}
+
+
+#content1 .c3 h1 {
+    position: relative;
+    color: white;
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.844);
+    font-family: "Oswald", sans-serif;
+    width: 21.1rem;
+    top: 25rem;
+    left: 3.6%;
+    padding: 1rem 2rem;
+    height: 5rem;
+    font-weight: 400;
+}
+
+
+
+#content1 img{
+    width: 25rem;
+    margin-top: 2rem;
+    margin: 0 1rem 0 1rem;
+}
+
+#content1 ul li {
+    display: inline-block;
+}
+
+
+main {
+    background-color: rgb(255, 255, 255);
+    grid-area: main;
+    text-align: center;
+    align-items: center;
+}
+
+
+main h1 {
+    position: relative;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+main ul li img {
+    align-items: center;
+    width: 15rem;
+    padding: 0 5rem 0 5rem;
+}
+
+
+main ul li{
+    display: inline-block;
+
+}
+
+main ul li h1 {
+    position: relative;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    font-size: 20px;
+    top: 23rem;
+    
+}
+
+
+/* HOVER ON BROWSE BY CATEGORY */
+
+main ul li img:hover {
+    background: linear-gradient(to top, rgb(234, 234, 234),transparent);
+    opacity: 60%;
+    transition: opacity 1s ease;
+}
+
+
+
+
+
+/* ARTICLE  */
+
+
+article {
+    margin-top: 5rem;
+    background-color: rgb(255, 255, 255);
+    grid-area: article;
+}
+
+article .logo-box {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 78rem;
+    height: 15rem;
+    background-color: rgb(243, 243, 243);
+}
+
+article .logo-box img {
+    position: relative;
+    width: 10rem;
+    margin-left: 7rem;
+    top: 2.2rem;
+}
+
+
+article h1 {
+    position: absolute;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    left: 17rem;
+    bottom: 8rem;
+}
+
+article p {
+    position: absolute;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.1rem;
+    left: 17rem;
+    bottom: 4.5rem;
+}
+
+
+/* CONTENT 6 */
+
+#content6 {
+    background-color: rgb(255, 255, 255);
+    grid-area: content6;
+    text-align: center;
+    align-items: center;
+}
+
+#content6 ul li {
+    display: inline-block;
+    background-color: black;
+    margin: 0 2.5rem 0 2.5rem;
+    height: 10rem;
+}
+
+#content6 ul li img {
+    width: 35rem;
+    margin-top: -3.5rem;
+}
+
+
+#content6 h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 2rem;
+    position: relative;
+    color: wheat;
+    bottom: 12rem;
+    margin-left: 10rem;
+}
+
+
+#content6 .e1 p {
+    position: relative;
+    font-family: "Oswald", sans-serif;
+    color: rgb(142, 142, 142);
+    bottom: 12rem;
+    margin-top: 1rem; 
+    margin-left: 10rem;
+}
+
+#content6 .e2 p {
+    position: relative;
+    font-family: "Oswald", sans-serif;
+    color: rgb(142, 142, 142);
+    bottom: 12rem; 
+    margin-top: 1rem; 
+    margin-left: 10rem;
+}
+
+#content6 .a1 p {
+    position: relative;
+    font-family: "Oswald", sans-serif;
+    color: rgb(142, 142, 142);
+    bottom: 12rem;  
+    margin-top: 1rem; 
+    margin-left: 10rem;
+}
+
+#content6 .a2 p {
+    position: relative;
+    font-family: "Oswald", sans-serif;
+    color: rgb(142, 142, 142);
+    bottom: 12rem;  
+    margin-top: 1rem; 
+    margin-left: 10rem;
+}
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: rgb(0, 0, 0);
+    grid-area: footer;
+}
+
+footer h1 {
+    font-family: "Oswald", sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 5rem;
+    font-weight: 400;
+}
+
+
+
